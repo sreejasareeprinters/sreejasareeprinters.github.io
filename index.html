@@ -2,127 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreeja Saree Printers | Hyderabad</title>
+    <title>Sreeja Saree Printers</title>
     <style>
         :root { --main-pink: #d81b60; --gold: #D4AF37; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #fff9fb; color: #333; }
+        body { font-family: sans-serif; margin: 0; background-color: #fff9fb; }
         
-        header { 
-            background: var(--main-pink); color: white; text-align: center; 
-            padding: 25px 20px; border-bottom: 4px solid var(--gold); 
-        }
-        .logo-text { font-size: 2.5rem; margin: 0; font-weight: bold; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header { background: var(--main-pink); color: white; text-align: center; padding: 20px; border-bottom: 4px solid var(--gold); }
 
-        /* Full Width Wrapper for side-by-side layout */
+        /* Simple Side-by-Side Layout */
         .page-wrapper { 
             display: flex; 
             justify-content: center; 
-            align-items: flex-start;
-            max-width: 100%;
-            margin: 20px auto;
-            gap: 20px;
-            padding: 0 10px;
+            padding: 20px; 
+            gap: 10px;
         }
 
-        /* Side Model Styling - Preserving White Background */
-        .side-model {
-            width: 250px;
-            flex-shrink: 0;
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .side-model img { width: 100%; height: auto; border-radius: 8px; }
+        /* Model Containers - Minimal code to prevent errors */
+        .side-model { width: 250px; flex-shrink: 0; }
+        .side-model img { width: 100%; height: auto; display: block; }
 
-        /* Central Content Area */
-        .main-container { width: 800px; display: flex; flex-direction: column; gap: 20px; }
-
-        .content-area { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        .about-box { border: 1px solid #fce4ec; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .about-box h2 { color: #880e4f; font-size: 1.2rem; margin: 0 0 10px 0; border-bottom: 2px solid var(--gold); display: inline-block; }
-
-        /* Butterfly Patterns Gallery */
-        .photo-layout { position: relative; height: 500px; margin: 20px 0; }
-        .photo-frame { position: absolute; border: 3px solid var(--gold); border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .main-container { max-width: 800px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         
-        /* Positioning the 5 frames */
-        .f1 { width: 180px; height: 180px; top: 0; left: 0; }
-        .f2 { width: 180px; height: 180px; top: 0; right: 0; }
-        .f3 { width: 320px; height: 320px; top: 90px; left: 50%; transform: translateX(-50%); z-index: 10; }
-        .f4 { width: 180px; height: 180px; bottom: 0; left: 0; }
-        .f5 { width: 180px; height: 180px; bottom: 0; right: 0; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .photo-box { border: 2px solid var(--gold); height: 200px; overflow: hidden; }
+        .photo-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Contact Details */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .info-card { background: white; padding: 15px; border-radius: 12px; border: 1px solid #eee; }
-        .btn { display: block; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; color: white; margin-bottom: 8px; font-size: 0.9rem; }
-        .btn-wa { background: #25D366; }
-        .contact-text { font-size: 0.8rem; line-height: 1.4; color: #555; }
-
-        footer { 
-            text-align: center; padding: 25px; color: #888; font-size: 0.8rem; 
-            border-top: 3px solid var(--gold); /* The last gold line */
-            margin-top: 40px;
-        }
-
-        /* Mobile View - Hides side models if screen is too small */
-        @media (max-width: 1000px) { .side-model { display: none; } }
+        footer { text-align: center; padding: 20px; border-top: 3px solid var(--gold); margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="logo-text">SREEJA SAREE PRINTERS</h1>
-    <p style="margin: 10px 0 5px 0; opacity: 0.9; font-weight: bold;">Expert Fabric Printing & Custom Designs</p>
-    <p style="margin: 0; color: #FFD700; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Digital and Screen Printing</p>
+    <h1>SREEJA SAREE PRINTERS</h1>
+    <p>DIGITAL AND SCREEN PRINTING</p>
 </header>
 
 <div class="page-wrapper">
     <div class="side-model">
-        <img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_111b62.jpg" alt="Screen Print Model">
-        <p style="margin-top:10px; font-weight:bold; color:var(--main-pink);">Screen Printed</p>
+        <img src="image_111b62.jpg" alt="Screen Print Model">
     </div>
 
     <div class="main-container">
-        <div class="content-area">
-            <div class="about-box">
-                <h2>About Our Products</h2>
-                <p style="font-size: 0.9rem;">We specialize in high-quality digital and screen printing on all types of sarees, ensuring vibrant colors and lasting quality.</p>
-            </div>
-
-            <div class="photo-layout">
-                <div class="photo-frame f1"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_10b5c6.png"></div>
-                <div class="photo-frame f2"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_04d881.jpg"></div>
-                <div class="photo-frame f3"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_110c43.jpg"></div>
-                <div class="photo-frame f4"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_0ed569.jpg"></div>
-                <div class="photo-frame f5"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_10b5eb.png"></div>
-            </div>
-        </div>
-
-        <div class="contact-grid">
-            <div class="info-card">
-                <a href="https://wa.me/919247350908" class="btn btn-wa">WhatsApp Office 1</a>
-                <p class="contact-text"><strong>Visit Us:</strong><br>Shivaji Nagar, Rajanna Bavi, Falaknuma, Hyderabad</p>
-            </div>
-            <div class="info-card">
-                <p class="contact-text"><strong>Email Us:</strong><br>sreejasareeprinters@gmail.com</p>
-                <p class="contact-text"><strong>Call:</strong><br>+91 9247350908</p>
-            </div>
+        <h3>About Our Products</h3>
+        <p>Expert fabric printing in Hyderabad. We specialize in high-quality screen and digital printing on all types of sarees.</p>
+        
+        <div class="photo-grid">
+            <div class="photo-box"><img src="image_10b5c6.png"></div>
+            <div class="photo-box"><img src="image_10b5eb.png"></div>
         </div>
     </div>
 
     <div class="side-model">
-        <img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_111b62.jpg" alt="Digital Print Model">
-        <p style="margin-top:10px; font-weight:bold; color:var(--main-pink);">Digital Printed</p>
+        <img src="image_111b62.jpg" alt="Digital Print Model">
     </div>
 </div>
 
 <footer>
-    © 2026 Sreeja Saree Printers | Quality Guaranteed | Hyderabad
+    © 2026 Sreeja Saree Printers | Quality Guaranteed
 </footer>
 
 </body>
