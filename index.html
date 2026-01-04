@@ -12,118 +12,112 @@
             background: var(--main-pink); color: white; text-align: center; 
             padding: 25px 20px; border-bottom: 4px solid var(--gold); 
         }
-        .logo-img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--gold); background: white; margin-bottom: 10px; }
         .logo-text { font-size: 2.5rem; margin: 0; font-weight: bold; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
 
-        /* Forces models to stay on sides */
+        /* Full Width Wrapper for side-by-side layout */
         .page-wrapper { 
             display: flex; 
-            justify-content: space-around; 
+            justify-content: center; 
             align-items: flex-start;
             max-width: 100%;
             margin: 20px auto;
-            gap: 10px;
+            gap: 20px;
+            padding: 0 10px;
         }
 
-        /* Model Styling with White Background */
+        /* Side Model Styling - Preserving White Background */
         .side-model {
-            width: 20%; /* Takes up 20% of screen width */
-            min-width: 200px;
+            width: 250px;
+            flex-shrink: 0;
             background: white;
             padding: 10px;
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        .side-model img { width: 100%; height: auto; display: block; }
+        .side-model img { width: 100%; height: auto; border-radius: 8px; }
 
-        /* Center Content Section */
-        .main-container { 
-            width: 55%; 
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+        /* Central Content Area */
+        .main-container { width: 800px; display: flex; flex-direction: column; gap: 20px; }
 
-        .content-area { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .content-area { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .about-box { border: 1px solid #fce4ec; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .about-box h2 { color: #880e4f; font-size: 1.2rem; margin-top: 0; border-bottom: 2px solid var(--gold); display: inline-block; }
+        .about-box h2 { color: #880e4f; font-size: 1.2rem; margin: 0 0 10px 0; border-bottom: 2px solid var(--gold); display: inline-block; }
 
-        /* Gallery Grid */
-        .photo-layout { position: relative; height: 450px; margin: 20px 0; }
-        .photo-frame { position: absolute; border: 3px solid var(--gold); border-radius: 10px; overflow: hidden; background: #f9f9f9; }
+        /* Butterfly Patterns Gallery */
+        .photo-layout { position: relative; height: 500px; margin: 20px 0; }
+        .photo-frame { position: absolute; border: 3px solid var(--gold); border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Adjusted Grid for better fit */
-        .f1 { width: 150px; height: 150px; top: 0; left: 0; }
-        .f2 { width: 150px; height: 150px; top: 0; right: 0; }
-        .f3 { width: 280px; height: 280px; top: 80px; left: 50%; transform: translateX(-50%); z-index: 10; }
-        .f4 { width: 150px; height: 150px; bottom: 0; left: 0; }
-        .f5 { width: 150px; height: 150px; bottom: 0; right: 0; }
+        /* Positioning the 5 frames */
+        .f1 { width: 180px; height: 180px; top: 0; left: 0; }
+        .f2 { width: 180px; height: 180px; top: 0; right: 0; }
+        .f3 { width: 320px; height: 320px; top: 90px; left: 50%; transform: translateX(-50%); z-index: 10; }
+        .f4 { width: 180px; height: 180px; bottom: 0; left: 0; }
+        .f5 { width: 180px; height: 180px; bottom: 0; right: 0; }
 
-        /* Contact Section */
+        /* Contact Details */
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .side-card { background: white; padding: 15px; border-radius: 12px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .btn { display: block; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; color: white; margin-bottom: 8px; font-size: 0.8rem; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #bc1888); }
+        .info-card { background: white; padding: 15px; border-radius: 12px; border: 1px solid #eee; }
+        .btn { display: block; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; color: white; margin-bottom: 8px; font-size: 0.9rem; }
         .btn-wa { background: #25D366; }
-        .contact-info { background: #fff9fb; border-left: 4px solid var(--main-pink); padding: 8px; margin-top: 5px; font-size: 0.75rem; }
+        .contact-text { font-size: 0.8rem; line-height: 1.4; color: #555; }
 
         footer { 
-            text-align: center; 
-            padding: 20px; 
-            color: #888; 
-            font-size: 0.8rem; 
-            border-top: 3px solid var(--gold); /* This is the bottom gold line */
-            margin-top: 30px;
+            text-align: center; padding: 25px; color: #888; font-size: 0.8rem; 
+            border-top: 3px solid var(--gold); /* The last gold line */
+            margin-top: 40px;
         }
+
+        /* Mobile View - Hides side models if screen is too small */
+        @media (max-width: 1000px) { .side-model { display: none; } }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="image_0ed569.jpg" class="logo-img">
     <h1 class="logo-text">SREEJA SAREE PRINTERS</h1>
-    <p style="margin: 5px 0; opacity: 0.9; font-size: 0.9rem;">Expert Fabric Printing & Custom Designs</p>
-    <p style="margin: 0; color: #FFD700; font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Digital and Screen Printing</p>
+    <p style="margin: 10px 0 5px 0; opacity: 0.9; font-weight: bold;">Expert Fabric Printing & Custom Designs</p>
+    <p style="margin: 0; color: #FFD700; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Digital and Screen Printing</p>
 </header>
 
 <div class="page-wrapper">
     <div class="side-model">
-        <img src="image_111b62.jpg" alt="Model Left">
-        <p style="text-align:center; font-weight:bold; color:var(--main-pink); font-size:0.8rem;">Screen Printing</p>
+        <img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_111b62.jpg" alt="Screen Print Model">
+        <p style="margin-top:10px; font-weight:bold; color:var(--main-pink);">Screen Printed</p>
     </div>
 
     <div class="main-container">
         <div class="content-area">
             <div class="about-box">
                 <h2>About Our Products</h2>
-                <p style="font-size: 0.85rem;">Premium high-quality screen and digital printing on Silk, Cotton, and Georgette.</p>
+                <p style="font-size: 0.9rem;">We specialize in high-quality digital and screen printing on all types of sarees, ensuring vibrant colors and lasting quality.</p>
             </div>
 
             <div class="photo-layout">
-                <div class="photo-frame f1"><img src="image_10b5c6.png"></div>
-                <div class="photo-frame f2"><img src="image_04d881.jpg"></div>
-                <div class="photo-frame f3"><img src="image_110c43.jpg"></div>
-                <div class="photo-frame f4"><img src="image_0ed569.jpg"></div>
-                <div class="photo-frame f5"><img src="image_10b5eb.png"></div>
+                <div class="photo-frame f1"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_10b5c6.png"></div>
+                <div class="photo-frame f2"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_04d881.jpg"></div>
+                <div class="photo-frame f3"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_110c43.jpg"></div>
+                <div class="photo-frame f4"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_0ed569.jpg"></div>
+                <div class="photo-frame f5"><img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_10b5eb.png"></div>
             </div>
         </div>
 
         <div class="contact-grid">
-            <div class="side-card">
-                <a href="https://www.instagram.com/sreeja_saree_printers/" class="btn btn-insta">Instagram Feed</a>
-                <a href="https://wa.me/919247350908" class="btn btn-wa">WhatsApp 1</a>
+            <div class="info-card">
+                <a href="https://wa.me/919247350908" class="btn btn-wa">WhatsApp Office 1</a>
+                <p class="contact-text"><strong>Visit Us:</strong><br>Shivaji Nagar, Rajanna Bavi, Falaknuma, Hyderabad</p>
             </div>
-            <div class="side-card">
-                <div class="contact-info"><strong>📍 Visit Us:</strong> Shivaji Nagar, Falaknuma, Hyderabad</div>
-                <div class="contact-info"><strong>✉️ Email:</strong> sreejasareeprinters@gmail.com</div>
+            <div class="info-card">
+                <p class="contact-text"><strong>Email Us:</strong><br>sreejasareeprinters@gmail.com</p>
+                <p class="contact-text"><strong>Call:</strong><br>+91 9247350908</p>
             </div>
         </div>
     </div>
 
     <div class="side-model">
-        <img src="image_111b62.jpg" alt="Model Right">
-        <p style="text-align:center; font-weight:bold; color:var(--main-pink); font-size:0.8rem;">Digital Printing</p>
+        <img src="https://raw.githubusercontent.com/Sreejasareeprinters/Sreejasareeprinters/main/image_111b62.jpg" alt="Digital Print Model">
+        <p style="margin-top:10px; font-weight:bold; color:var(--main-pink);">Digital Printed</p>
     </div>
 </div>
 
