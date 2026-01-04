@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <title>Sreeja Saree Printers</title>
     <style>
-        :root { --main-pink: #d81b60; --gold: #D4AF37; }
-        body { font-family: sans-serif; margin: 0; background-color: #fff9fb; }
+        body { margin: 0; background-color: #fff9fb; font-family: sans-serif; }
+        header { background: #d81b60; color: white; text-align: center; padding: 20px; border-bottom: 5px solid #D4AF37; }
         
-        header { background: var(--main-pink); color: white; text-align: center; padding: 20px; border-bottom: 4px solid var(--gold); }
-
-        /* Simple Side-by-Side Layout */
-        .page-wrapper { 
-            display: flex; 
-            justify-content: center; 
-            padding: 20px; 
-            gap: 10px;
-        }
-
-        /* Model Containers - Minimal code to prevent errors */
-        .side-model { width: 250px; flex-shrink: 0; }
-        .side-model img { width: 100%; height: auto; display: block; }
-
-        .main-container { max-width: 800px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        /* THE LAYOUT */
+        .wrapper { display: flex; justify-content: space-between; align-items: flex-start; padding: 20px; }
         
-        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
-        .photo-box { border: 2px solid var(--gold); height: 200px; overflow: hidden; }
-        .photo-box img { width: 100%; height: 100%; object-fit: cover; }
+        /* THE MODELS (Left and Right) */
+        .model-side { width: 250px; }
+        .model-side img { width: 100%; height: auto; border: 1px solid #ddd; }
 
-        footer { text-align: center; padding: 20px; border-top: 3px solid var(--gold); margin-top: 20px; }
+        /* THE CENTER CONTENT */
+        .center-box { flex: 1; max-width: 800px; margin: 0 20px; background: white; padding: 20px; border-radius: 10px; }
+        .about-section { border-bottom: 2px solid #D4AF37; margin-bottom: 20px; padding-bottom: 10px; }
+        
+        /* BUTTERFLY BOXES */
+        .butterfly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .pattern-box { border: 3px solid #D4AF37; height: 250px; }
+        .pattern-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        footer { text-align: center; padding: 30px; border-top: 5px solid #D4AF37; margin-top: 50px; color: #888; }
     </style>
 </head>
 <body>
@@ -37,28 +33,30 @@
     <p>DIGITAL AND SCREEN PRINTING</p>
 </header>
 
-<div class="page-wrapper">
-    <div class="side-model">
-        <img src="image_111b62.jpg" alt="Screen Print Model">
+<div class="wrapper">
+    <div class="model-side">
+        <img src="image_111b62.jpg" alt="Check if image_111b62.jpg is in your folder">
     </div>
 
-    <div class="main-container">
-        <h3>About Our Products</h3>
-        <p>Expert fabric printing in Hyderabad. We specialize in high-quality screen and digital printing on all types of sarees.</p>
-        
-        <div class="photo-grid">
-            <div class="photo-box"><img src="image_10b5c6.png"></div>
-            <div class="photo-box"><img src="image_10b5eb.png"></div>
+    <div class="center-box">
+        <div class="about-section">
+            <h2>About Our Products</h2>
+            <p>Expert fabric printing in Hyderabad. Premium Screen and Digital Saree Printing.</p>
+        </div>
+
+        <div class="butterfly-grid">
+            <div class="pattern-box"><img src="image_10b5c6.png" alt="Body Part"></div>
+            <div class="pattern-box"><img src="image_10b5eb.png" alt="Pallo Part"></div>
         </div>
     </div>
 
-    <div class="side-model">
-        <img src="image_111b62.jpg" alt="Digital Print Model">
+    <div class="model-side">
+        <img src="image_111b62.jpg" alt="Check if image_111b62.jpg is in your folder">
     </div>
 </div>
 
 <footer>
-    © 2026 Sreeja Saree Printers | Quality Guaranteed
+    © 2026 Sreeja Saree Printers | Hyderabad
 </footer>
 
 </body>
