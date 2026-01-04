@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreeja Saree Printers | Quality Printing in Hyderabad</title>
+    <title>Sreeja Saree Printers | Quality Printing Hyderabad</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #fff9fb; color: #333; }
         header { background: linear-gradient(135deg, #880e4f, #d81b60); color: white; text-align: center; padding: 60px 20px; }
-        .logo-text { font-size: 2.8rem; margin: 0; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .logo-text { font-size: 2.5rem; margin: 0; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         .tagline { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
         .main-card { max-width: 800px; margin: -40px auto 40px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
         .info-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; text-align: left; }
         .info-box { background: #fdf2f6; padding: 20px; border-radius: 10px; border-left: 5px solid #d81b60; height: 100%; }
         
-        /* WhatsApp Button Styles */
-        .whatsapp-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
-        .btn-whatsapp { display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: 0.3s; min-width: 200px; }
-        .btn-whatsapp:hover { background: #128C7E; transform: scale(1.05); }
+        /* WhatsApp Buttons */
+        .wa-section { margin-top: 30px; border-top: 1px dashed #d81b60; padding-top: 20px; }
+        .wa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .btn-wa { display: block; background: #25D366; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-wa:hover { background: #128C7E; transform: scale(1.02); }
+        .share-link { display: inline-block; margin-top: 20px; color: #880e4f; font-weight: bold; text-decoration: underline; cursor: pointer; }
         
         .contact-link { color: #d81b60; text-decoration: none; font-weight: bold; word-break: break-word; }
         footer { text-align: center; padding: 30px; color: #888; font-size: 0.9rem; }
-        @media (max-width: 600px) { .info-section { grid-template-columns: 1fr; } .logo-text { font-size: 2rem; } .whatsapp-container { flex-direction: column; align-items: center; } }
+        @media (max-width: 600px) { .info-section, .wa-grid { grid-template-columns: 1fr; } .logo-text { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
@@ -32,7 +34,7 @@
 
 <div class="main-card">
     <h2>Welcome to Our Workshop</h2>
-    <p>Premium quality saree printing services. We specialize in bringing vibrant designs to your fabric with modern and traditional techniques.</p>
+    <p>Premium quality saree printing services in Hyderabad. We specialize in bringing vibrant designs to your fabric.</p>
     
     <div class="info-section">
         <div class="info-box">
@@ -40,27 +42,26 @@
             Sreeja Saree Printers,<br>
             18-3-463/1/65/a,<br>
             Shivaji Nagar, Rajanna Bavi,<br>
-            Falaknuma,<br>
-            <strong>Hyderabad</strong>,<br>
+            Falaknuma, <strong>Hyderabad</strong>,<br>
             Telangana - 500053
         </div>
         <div class="info-box">
             <strong>📞 Contact Details</strong><br>
             Phone 1: <a href="tel:+919247350908" class="contact-link">+91 9247350908</a><br>
             Phone 2: <a href="tel:+916281129602" class="contact-link">+91 6281129602</a><br><br>
-            <strong>✉️ Email Us</strong><br>
-            <a href="mailto:sreejasareeprinters@gmail.com" class="contact-link">sreejasareeprinters@gmail.com</a><br>
-            <a href="mailto:gundannagarimuralidharreddy@gmail.com" class="contact-link">gundannagarimuralidharreddy@gmail.com</a>
+            <strong>✉️ Email</strong><br>
+            <a href="mailto:sreejasareeprinters@gmail.com" class="contact-link">sreejasareeprinters@gmail.com</a>
         </div>
     </div>
 
-    <h3 style="margin-top: 30px; color: #880e4f;">Chat with us on WhatsApp:</h3>
-    <div class="whatsapp-container">
-        <a href="https://wa.me/919247350908?text=Hello!%20I%20am%20interested%20in%20your%20saree%20printing%20services." class="btn-whatsapp">
-            Chat with Office 1
-        </a>
-        <a href="https://wa.me/916281129602?text=Hello!%20I%20am%20interested%20in%20your%20saree%20printing%20services." class="btn-whatsapp">
-            Chat with Office 2
+    <div class="wa-section">
+        <strong>Direct WhatsApp Inquiry:</strong>
+        <div class="wa-grid">
+            <a href="https://wa.me/919247350908?text=Hello%20Sreeja%20Saree%20Printers!" class="btn-wa">WhatsApp Office 1</a>
+            <a href="https://wa.me/916281129602?text=Hello%20Sreeja%20Saree%20Printers!" class="btn-wa">WhatsApp Office 2</a>
+        </div>
+        <a href="https://api.whatsapp.com/send?text=Check out Sreeja Saree Printers in Hyderabad: https://sreejasareeprinters.github.io" class="share-link">
+            📢 Share Website with Friends
         </a>
     </div>
 </div>
