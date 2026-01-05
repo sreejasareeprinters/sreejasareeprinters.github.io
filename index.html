@@ -1,106 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sreeja Saree Printers | Hyderabad</title>
-    <style>
-        :root { --main-pink: #d81b60; --gold: #D4AF37; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #fff9fb; color: #333; }
-        
-        header { 
-            background: var(--main-pink); color: white; text-align: center; 
-            padding: 25px 20px; border-bottom: 4px solid var(--gold); 
-        }
-
-        /* The Main Layout Wrapper */
-        .page-wrapper { 
-            display: flex; 
-            justify-content: center; 
-            align-items: flex-start;
-            max-width: 1400px; 
-            margin: 20px auto;
-            gap: 15px;
-        }
-
-        /* Side Model Container - Set to start at About box */
-        .side-model {
-            width: 280px;
-            flex-shrink: 0;
-            padding-top: 10px; /* Aligns with the About Our Products box */
-        }
-        
-        /* Ensures white background around models looks premium */
-        .side-model img {
-            width: 100%;
-            height: auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            display: block;
-        }
-
-        /* Center Content Area */
-        .main-container { 
-            width: 800px; 
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .content-area { background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; }
-        .about-box { border: 1px solid #fce4ec; padding: 15px; border-radius: 8px; }
-        .about-box h2 { color: #880e4f; font-size: 1.2rem; border-bottom: 2px solid var(--gold); display: inline-block; }
-
-        /* Butterfly Box Grid */
-        .photo-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        .photo-frame { border: 3px solid var(--gold); border-radius: 10px; overflow: hidden; height: 300px; }
-        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-
-        footer { 
-            text-align: center; 
-            padding: 25px; 
-            color: #888; 
-            border-top: 3px solid var(--gold); /* This is your last gold line */
-            margin-top: 40px;
-        }
-
-        @media (max-width: 1100px) { .side-model { display: none; } }
-    </style>
+<meta charset="UTF-8">
+<title>Sreeja Saree Printers - Kondapur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:Arial,sans-serif;background:#f8f8f8;}
+.top {background:#d91b60;color:white;text-align:center;padding:25px;}
+.top h1 {font-size:36px;margin-bottom:5px;}
+.top h2 {font-size:16px;font-weight:400;}
+.container {max-width:1200px;margin:30px auto;background:white;padding:30px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+.models {position:relative;}
+.model-left,.model-right {position:absolute;bottom:0;width:220px;}
+.model-left {left:-50px;}
+.model-right {right:-50px;}
+.content {display:flex;gap:30px;margin:0 250px;}
+.about {flex:2;padding:25px;border:1px solid #eee;}
+.about h3 {color:#d91b60;margin-bottom:15px;}
+.frames {display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px;}
+.frame {border:3px solid #f3d08a;height:130px;background:#fffaf1;}
+.frame.center {grid-column:1/-1;height:160px;}
+.sidebar {flex:1;font-size:14px;}
+.sidebar h4 {color:#d91b60;margin:15px 0 10px 0;}
+.btn {display:block;margin:5px 0;padding:12px;background:#25d366;color:white;text-decoration:none;border-radius:8px;text-align:center;font-weight:500;}
+.btn:hover {opacity:0.9;}
+.footer {text-align:center;color:#666;margin-top:30px;padding:20px;background:#f8f8f8;}
+@media(max-width:1100px) {.model-left,.model-right{display:none;}.content{margin:0;}}
+</style>
 </head>
 <body>
-
-<header>
-    <h1 style="margin:0; color:#FFD700;">SREEJA SAREE PRINTERS</h1>
-    <p style="margin:5px 0 0 0; font-weight:bold;">DIGITAL AND SCREEN PRINTING</p>
-</header>
-
-<div class="page-wrapper">
-    <div class="side-model">
-        <img src="model_left.jpg" alt="Screen Printed Model">
-    </div>
-
-    <div class="main-container">
-        <div class="content-area">
-            <div class="about-box">
-                <h2>About Our Products</h2>
-                <p>We specialize in premium high-quality screen and digital printing on all types of sarees.</p>
-            </div>
-
-            <div class="photo-layout">
-                <div class="photo-frame"><img src="image_10b5c6.png"></div>
-                <div class="photo-frame"><img src="image_10b5eb.png"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="side-model">
-        <img src="model_right.jpg" alt="Digital Printed Model">
-    </div>
+<div class="top">
+<h1>SREEJA SAREE PRINTERS</h1>
+<h2>Digital & Screen Printing - Kondapur, Hyderabad</h2>
 </div>
 
-<footer>
-    © 2026 Sreeja Saree Printers | Quality Guaranteed | Hyderabad
-</footer>
+<div class="container">
+<div class="models">
+<img src="model_left.jpg" class="model-left" alt="Saree Model">
+<img src="model_right.jpg" class="model-right" alt="Saree Model">
+</div>
 
+<div class="content">
+<div class="about">
+<h3>About Our Services</h3>
+<p>Premium digital saree printing in Hyderabad. Your custom designs printed in HD colors on soft fabrics for boutiques and saree brands.</p>
+
+<div class="frames">
+<div class="frame"></div><div class="frame"></div>
+<div class="frame center"></div>
+<div class="frame"></div><div class="frame"></div>
+</div>
+</div>
+
+<div class="sidebar">
+<h4>Watch Our Work</h4>
+<a href="#" class="btn">📱 Instagram</a>
+<a href="#" class="btn">💬 WhatsApp Order</a>
+<a href="#" class="btn">📘 Facebook</a>
+
+<h4>Printing Types</h4>
+<ul style="font-size:13px;">
+<li>Digital saree printing</li>
+<li>Screen printing</li>
+<li>Foil / Glitter printing</li>
+<li>Custom blouse & dupatta prints</li>
+</ul>
+
+<h4>Contact</h4>
+<p>📞 9XXXXXXXXX</p>
+<p>📍 Kondapur, Hyderabad</p>
+</div>
+</div>
+
+<div class="footer">© 2026 Sreeja Saree Printers. All Rights Reserved.</div>
+</div>
 </body>
 </html>
