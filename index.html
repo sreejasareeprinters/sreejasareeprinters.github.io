@@ -105,43 +105,52 @@
 
         footer { text-align: center; padding: 25px; color: #888; border-top: 4px solid var(--gold); margin-top: 40px; }
 
-        @media(max-width: 800px) {
-            header { 
-                grid-template-columns: 1fr; 
-                padding: 15px; 
-                text-align: center; 
-            }
-            .header-box { display: none; } /* Hides detailed text for cleaner mobile header */
-            
-            .page { 
-                grid-template-columns: 1fr; 
-                margin: 10px auto; 
-            }
-            .model { display: none; } /* Hides side models to focus on your work */
+      @media(max-width: 800px) {
+    /* Fixes the header to show contact info on mobile */
+    header { 
+        grid-template-columns: 1fr; 
+        padding: 10px; 
+        gap: 10px;
+    }
+    .header-box { 
+        display: block; 
+        text-align: center; 
+        font-size: 11px; 
+        padding: 8px;
+    }
+    
+    /* Fixes the badge overlapping the logo */
+    .header-center { display: flex; flex-direction: column; align-items: center; }
+    .experience-badge { 
+        position: static; /* Moves it from on top of logo to below it */
+        margin: 5px auto;
+        display: inline-block;
+        width: fit-content;
+    }
 
-            /* Re-arranges the 5 boxes into a single column for mobile */
-            .design { 
-                height: auto; 
-                display: flex; 
-                flex-direction: column; 
-                gap: 15px; 
-                align-items: center; 
-            }
-            .frame { 
-                position: relative; /* Removes overlapping on mobile */
-                width: 90% !important; 
-                height: 250px !important; 
-                left: auto !important; 
-                right: auto !important; 
-                top: auto !important; 
-                bottom: auto !important; 
-                transform: none !important; 
-            }
-            .f3 { width: 95% !important; height: 300px !important; }
-            
-            .title { font-size: 22px; }
-            .modal-content { max-width: 95%; }
-        }
+    .page { grid-template-columns: 1fr; margin: 5px auto; }
+    .model { display: none; } /* Keeps side models hidden for better focus */
+
+    /* Aligns all 5 boxes in a neat vertical line for scrolling */
+    .design { 
+        height: auto; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
+        padding-bottom: 20px;
+    }
+    .frame { 
+        position: relative !important; 
+        width: 280px !important; 
+        height: 280px !important; 
+        left: auto !important; 
+        right: auto !important; 
+        top: auto !important; 
+        transform: none !important; 
+    }
+    .f3 { width: 300px !important; height: 300px !important; }
+}
     </style>
 </head>
 <body>
