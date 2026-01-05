@@ -3,267 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sreeja Saree Printers</title>
+<title>Sreeja Saree Printers | Premium Quality Hyderabad</title>
 
 <style>
-:root{
-    --pink:#d81b60;
-    --gold:#D4AF37;
-}
+:root { --main-pink:#d81b60; --gold:#D4AF37; }
 
 body{
+    font-family:'Segoe UI',Arial,sans-serif;
     margin:0;
-    font-family:Segoe UI,Arial,sans-serif;
-    background:#fff6f9;
+    background:#fff9fb;
     color:#333;
 }
 
-/* ================= HEADER ================= */
 header{
-    background:var(--pink);
-    border-bottom:4px solid var(--gold);
-    padding:20px 30px;
-    display:grid;
-    grid-template-columns: 260px 1fr 260px;
-    align-items:center;
-    gap:15px;
-}
-
-.header-box{
-    background:#fff0f4;
-    padding:10px 12px;
-    font-size:12px;
-    border-left:4px solid var(--pink);
-}
-
-.header-box strong{
-    color:#880e4f;
-    display:block;
-    margin-bottom:3px;
-}
-
-.header-box a{
-    color:#880e4f;
-    font-weight:600;
-    text-decoration:underline;
-}
-
-.header-center{
+    background:var(--main-pink);
+    color:#fff;
     text-align:center;
+    padding:30px 20px;
+    border-bottom:4px solid var(--gold);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.logo{
-    width:90px;
-    height:90px;
+.logo-img{
+    width:110px;
+    height:110px;
     border-radius:50%;
     border:3px solid var(--gold);
     background:#fff;
+    margin-bottom:10px;
 }
 
-.title{
-    font-size:28px;
-    font-weight:800;
+.logo-text{
+    font-size:2.8rem;
+    margin:0;
+    font-weight:bold;
     color:#FFD700;
-    margin:6px 0 2px;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.subtitle{
-    font-size:13px;
-    color:#fff;
-}
-
-.subline{
-    font-size:12px;
-    color:#FFD700;
-    font-weight:700;
-}
-
-/* ================= PAGE LAYOUT ================= */
-.page{
-    max-width:1400px;
-    margin:25px auto;
+.main-container{
+    max-width:1200px;
+    margin:20px auto;
     display:grid;
-    grid-template-columns:220px 1fr 220px;
+    grid-template-columns:1fr 320px;
     gap:20px;
-    padding:0 15px;
+    padding:0 20px;
 }
 
-/* ================= MODELS ================= */
-.model{
+.content-area{
     background:#fff;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,.12);
-    display:flex;
-    justify-content:center;
-    padding:15px;
-}
-
-.model img{
-    max-height:640px;
-    width:auto;
-}
-
-/* ================= CENTER ================= */
-.center{
-    background:#fff;
-    border-radius:14px;
-    box-shadow:0 6px 20px rgba(0,0,0,.06);
     padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* ================= ABOUT ================= */
-.about{
-    border:1px solid #f9dbe6;
-    padding:18px;
-    border-radius:10px;
+.about-box{
+    border:1px solid #fce4ec;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:25px;
 }
 
-.about h2{
-    margin-top:0;
+.about-box h2{
     color:#880e4f;
     border-bottom:2px solid var(--gold);
     display:inline-block;
 }
 
-/* ================= DESIGN GRID ================= */
-.design{
-    position:relative;
-    height:520px;
-    margin:25px 0;
+.about-box p{
+    line-height:1.6;
 }
 
-.frame img{
+.photo-layout{
+    position:relative;
+    height:520px;
+    margin-top:10px;
+}
+
+.photo-frame{
+    position:absolute;
+    border:3px solid var(--gold);
+    border-radius:10px;
+    overflow:hidden;
+    background:#eee;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.photo-frame img{
     width:100%;
     height:100%;
     object-fit:cover;
-    border-radius:8px;
 }
 
+/* 5 CENTER BOXES – PERFECT ALIGNMENT */
+.f1{ width:200px; height:200px; top:60px; left:120px; }
+.f2{ width:200px; height:200px; top:60px; right:120px; }
+.f3{ width:320px; height:320px; top:100px; left:50%; transform:translateX(-50%); z-index:10; }
+.f4{ width:200px; height:200px; bottom:40px; left:120px; }
+.f5{ width:200px; height:200px; bottom:40px; right:120px; }
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-.f1{width:180px;height:180px;top:0;left:0;}
-.f2{width:180px;height:180px;top:0;right:0;}
-.f3{width:340px;height:340px;top:110px;left:50%;transform:translateX(-50%);}
-.f4{width:180px;height:180px;bottom:0;left:0;}
-.f5{width:180px;height:180px;bottom:0;right:0;}
-
-/* ================= BUTTONS ================= */
-.actions{
-    margin-top:10px;
+.side-card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 .btn{
     display:block;
     padding:12px;
-    text-align:center;
-    font-weight:700;
-    color:#fff;
-    text-decoration:none;
     border-radius:6px;
-    margin-bottom:8px;
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    margin-bottom:10px;
 }
 
-.insta{background:linear-gradient(45deg,#f09433,#bc1888);}
-.wa{background:#25D366;}
+.btn-insta{ background:linear-gradient(45deg,#f09433,#bc1888); }
+.btn-wa{ background:#25D366; }
 
-/* ================= MOBILE ================= */
-@media(max-width:1100px){
-    header{grid-template-columns:1fr;}
-    .header-box{display:none;}
-    .page{grid-template-columns:1fr;}
-    .model{display:none;}
+.contact-info{
+    background:#fdf2f6;
+    border-left:4px solid var(--main-pink);
+    padding:12px;
+    margin-top:10px;
+    font-size:0.85rem;
+}
+
+.contact-info strong{
+    display:block;
+    color:#880e4f;
+    margin-bottom:3px;
+}
+
+.contact-info a{
+    color:var(--main-pink);
+    text-decoration:none;
+    font-weight:bold;
+    word-break:break-all;
+}
+
+@media(max-width:900px){
+    .main-container{ grid-template-columns:1fr; }
+
+    .photo-layout{
+        height:auto;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .photo-frame{
+        position:static;
+        width:140px;
+        height:140px;
+        transform:none;
+    }
+
+    .f3{
+        width:260px;
+        height:260px;
+        order:-1;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="header-box">
-        <strong>📍 Address</strong>
-        Sreeja Saree Printers,<br>
-        18-3-463/1/65/A, Shivaji Nagar,<br>
-        Rajanna Bavi, Falaknuma,<br>
-        Hyderabad – 500053, Telangana
-        <br><br>
-
-        <strong>📍 Precise Location</strong>
-        <a href="https://www.google.com/maps/search/8FQG%2BH8+Hyderabad" target="_blank">
-            8FQG+H8 Hyderabad, Telangana
-        </a>
-    </div>
-
-    <div class="header-center">
-        <img src="logo.jpg" onerror="this.src='https://via.placeholder.com/90'" class="logo">
-        <div class="title">SREEJA SAREE PRINTERS</div>
-        <div class="subtitle">Expert Fabric Printing & Custom Designs</div>
-        <div class="subline">DIGITAL AND SCREEN PRINTING</div>
-    </div>
-
-    <div class="header-box">
-        <strong>📞 Phone</strong>
-        +91 92473 50908<br>
-        +91 62811 29602
-        <br><br>
-
-        <strong>✉ Email</strong>
-        sreejasareeprinters@gmail.com<br>
-        gundannagarimuralidharreddy@gmail.com
-    </div>
-</header>
-
-<div class="page">
-
-    <div class="model">
-        <img src="model_left.jpg">
-    </div>
-
-    <div class="center">
-        <div class="about">
-            <h2>About Our Products</h2>
-            <p>
-                <b>Expert Fabric Printing in Hyderabad.</b> We offer a perfect blend of traditional
-                <b>Screen Printing</b> and modern <b>Digital Printing</b>. Elevate your collection with our
-                <b>Bespoke Digital Designs</b>, customized to meet your exact style and requirements.
-            </p>
-        </div>
-
-        <div class="design">
-    <div class="frame f1">
-        <img src="pic1.jpg">
-    </div>
-
-    <div class="frame f2">
-        <img src="pic2.jpg">
-    </div>
-
-    <div class="frame f3">
-        <img src="pic3.jpg">
-    </div>
-
-    <div class="frame f4">
-        <img src="pic4.jpg">
-    </div>
-
-    <div class="frame f5">
-        <img src="pic5.jpg">
-    </div>
-</div>         
-        
-    
-
-        <div class="actions">
-            <a class="btn insta" href="#">Instagram Feed</a>
-            <a class="btn wa" href="https://wa.me/919247350908">WhatsApp Office 1</a>
-            <a class="btn wa" href="https://wa.me/916281129602">WhatsApp Office 2</a>
-        </div>
-    </div>
-
-    <div class="model">
-        <img src="model_right.jpg">
-    </div>
-
-</div>
-
-</body>
-</html>
+<heade
