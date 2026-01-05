@@ -157,12 +157,12 @@
 
 <header>
     <div class="header-box">
-        <strong>📍 Address</strong>
-        Sreeja Saree Printers,18-3-463/1/65/a, Shivaji Nagar, Rajannabavi, Falaknuma, Hyderabad – 500053.Telangana
-        <br><br>
-         <strong>📍 Precise Location (Plus Code)</strong>
-        <a href="https://www.google.com/maps/search/8FQG%H8+Hyderabad,+Telangana" target="_blank">8FQG+H8 Hyderabad, Telangana</a>
-    </div>
+    <strong>📍 Address</strong>
+    Sreeja Saree Printers,18-3-463/1/65/A, Shivaji Nagar,Rajannabavi, Falaknuma, Hyderabad – 500053,Telangana
+    <br><br>
+    <strong>📍 Precise Location</strong>
+    <a href="javascript:void(0)" onclick="openMapModal()">8FQG+H8 Hyderabad, Telangana</a>
+</div>
 
     <div class="header-center">
         <div class="experience-badge">15 YEARS EXPERIENCE</div>
@@ -210,12 +210,21 @@
     <div class="model"><img src="model_right.jpg"></div>
 </div>
 
-<div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="imgPopup">
+<div id="mapModal" class="modal">
+    <span class="close" onclick="closeMapModal()">&times;</span>
+    <div class="modal-content" style="background:white; padding:10px;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.648214316684!2d78.47285!3d17.33235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE5JzU2LjUiTiA3OMKwMjgnMjIuMyJF!5e0!3m2!1sen!2sin!4v1704460000000!5m2!1sen!2sin" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <div style="text-align:center; padding-top:10px;">
+            <a href="https://plus.codes/8FQG+H8" target="_blank" class="btn wa">Open in Google Maps App</a>
+        </div>
+    </div>
 </div>
 
 <script>
+    /* Image Popup Functions */
     function openModal(src) {
         document.getElementById("myModal").style.display = "block";
         document.getElementById("imgPopup").src = src;
@@ -223,10 +232,21 @@
     function closeModal() {
         document.getElementById("myModal").style.display = "none";
     }
-    // Close modal if user clicks outside the image
+
+    /* Map Popup Functions */
+    function openMapModal() {
+        document.getElementById("mapModal").style.display = "flex";
+    }
+    function closeMapModal() {
+        document.getElementById("mapModal").style.display = "none";
+    }
+
+    /* Close everything if user clicks outside the box */
     window.onclick = function(event) {
-        let modal = document.getElementById("myModal");
-        if (event.target == modal) { closeModal(); }
+        let imgModal = document.getElementById("myModal");
+        let mapModal = document.getElementById("mapModal");
+        if (event.target == imgModal) { closeModal(); }
+        if (event.target == mapModal) { closeMapModal(); }
     }
 </script>
 
