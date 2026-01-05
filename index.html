@@ -105,11 +105,42 @@
 
         footer { text-align: center; padding: 25px; color: #888; border-top: 4px solid var(--gold); margin-top: 40px; }
 
-        @media(max-width:1100px){
-            header{grid-template-columns:1fr;}
-            .header-box{display:none;}
-            .page{grid-template-columns:1fr;}
-            .model{display:none;}
+        @media(max-width: 800px) {
+            header { 
+                grid-template-columns: 1fr; 
+                padding: 15px; 
+                text-align: center; 
+            }
+            .header-box { display: none; } /* Hides detailed text for cleaner mobile header */
+            
+            .page { 
+                grid-template-columns: 1fr; 
+                margin: 10px auto; 
+            }
+            .model { display: none; } /* Hides side models to focus on your work */
+
+            /* Re-arranges the 5 boxes into a single column for mobile */
+            .design { 
+                height: auto; 
+                display: flex; 
+                flex-direction: column; 
+                gap: 15px; 
+                align-items: center; 
+            }
+            .frame { 
+                position: relative; /* Removes overlapping on mobile */
+                width: 90% !important; 
+                height: 250px !important; 
+                left: auto !important; 
+                right: auto !important; 
+                top: auto !important; 
+                bottom: auto !important; 
+                transform: none !important; 
+            }
+            .f3 { width: 95% !important; height: 300px !important; }
+            
+            .title { font-size: 22px; }
+            .modal-content { max-width: 95%; }
         }
     </style>
 </head>
