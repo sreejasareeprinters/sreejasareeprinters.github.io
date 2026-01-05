@@ -3,255 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sreeja Saree Printers | Premium Quality Hyderabad</title>
+<title>Sreeja Saree Printers</title>
 
 <style>
 :root{
-    --main-pink:#d81b60;
+    --pink:#d81b60;
     --gold:#D4AF37;
 }
 
 body{
     margin:0;
-    font-family:'Segoe UI',Arial,sans-serif;
-    background:#fff7fa;
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#fff6f9;
     color:#333;
 }
 
 /* ================= HEADER ================= */
 header{
-    background:var(--main-pink);
-    text-align:center;
-    padding:28px 20px;
+    background:var(--pink);
     border-bottom:4px solid var(--gold);
+    padding:20px 30px;
+    display:grid;
+    grid-template-columns: 260px 1fr 260px;
+    align-items:center;
+    gap:15px;
 }
 
-.logo-img{
-    width:100px;
-    height:100px;
+.header-box{
+    background:#fff0f4;
+    padding:10px 12px;
+    font-size:12px;
+    border-left:4px solid var(--pink);
+}
+
+.header-box strong{
+    color:#880e4f;
+    display:block;
+    margin-bottom:3px;
+}
+
+.header-center{
+    text-align:center;
+}
+
+.logo{
+    width:90px;
+    height:90px;
     border-radius:50%;
     border:3px solid var(--gold);
     background:#fff;
 }
 
-.logo-text{
-    margin:10px 0 5px;
-    font-size:2.6rem;
-    color:#FFD700;
+.title{
+    font-size:28px;
     font-weight:800;
+    color:#FFD700;
+    margin:6px 0 2px;
 }
 
-/* ================= MAIN WRAPPER ================= */
-.page-wrap{
+.subtitle{
+    font-size:13px;
+    color:#fff;
+}
+
+.subline{
+    font-size:12px;
+    color:#FFD700;
+    font-weight:700;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.page{
     max-width:1400px;
-    margin:20px auto;
-    display:flex;
-    justify-content:center;
-    gap:25px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:220px 1fr 220px;
+    gap:20px;
     padding:0 15px;
 }
 
-/* ================= SIDE MODELS ================= */
-.model-side{
-    width:190px;
+/* ================= MODELS ================= */
+.model{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
     display:flex;
     justify-content:center;
+    padding:15px;
 }
 
-.model-side img{
-    width:100%;
-    max-height:620px;
-    object-fit:contain;
-    border-radius:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
+.model img{
+    max-height:640px;
+    width:auto;
 }
 
-/* ================= CENTER CONTENT ================= */
-.main-container{
-    max-width:820px;
+/* ================= CENTER ================= */
+.center{
     background:#fff;
-    padding:25px;
     border-radius:14px;
     box-shadow:0 6px 20px rgba(0,0,0,.06);
+    padding:25px;
 }
 
 /* ================= ABOUT ================= */
-.about-box{
-    border:1px solid #fce4ec;
-    padding:20px;
+.about{
+    border:1px solid #f9dbe6;
+    padding:18px;
     border-radius:10px;
 }
 
-.about-box h2{
-    color:#880e4f;
+.about h2{
     margin-top:0;
+    color:#880e4f;
     border-bottom:2px solid var(--gold);
     display:inline-block;
 }
 
-/* ================= PHOTO GRID ================= */
-.photo-layout{
+/* ================= DESIGN GRID ================= */
+.design{
     position:relative;
-    height:600px;
+    height:520px;
     margin:25px 0;
 }
 
-.photo-frame{
+.frame{
     position:absolute;
     border:3px solid var(--gold);
     border-radius:10px;
-    overflow:hidden;
     background:#eee;
 }
 
-.photo-frame img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.f1{width:200px;height:200px;top:0;left:0;}
-.f2{width:200px;height:200px;top:0;right:0;}
-.f3{width:360px;height:360px;top:120px;left:50%;transform:translateX(-50%);z-index:10;}
-.f4{width:200px;height:200px;bottom:0;left:0;}
-.f5{width:200px;height:200px;bottom:0;right:0;}
-
-/* ================= SIDEBAR ================= */
-.sidebar{
-    margin-top:25px;
-    display:grid;
-    grid-template-columns:1fr;
-    gap:15px;
-}
-
-.side-card{
-    background:#fff;
-    padding:18px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.05);
-}
-
-.btn{
-    display:block;
-    padding:12px;
-    text-align:center;
-    color:#fff;
-    font-weight:700;
-    border-radius:6px;
-    text-decoration:none;
-    margin-bottom:8px;
-}
-
-.btn-insta{background:linear-gradient(45deg,#f09433,#bc1888);}
-.btn-wa{background:#25D366;}
-
-.contact-info{
-    background:#fff1f5;
-    border-left:4px solid var(--main-pink);
-    padding:10px;
-    font-size:.85rem;
-    margin-bottom:8px;
-}
-
-.contact-info strong{
-    display:block;
-    color:#880e4f;
-}
-
-/* ================= FOOTER ================= */
-footer{
-    text-align:center;
-    padding:30px;
-    font-size:.85rem;
-    color:#888;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:1100px){
-    .model-side{display:none;}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <img src="logo.jpg" onerror="this.src='https://via.placeholder.com/100'" class="logo-img">
-    <div class="logo-text">SREEJA SAREE PRINTERS</div>
-    <div style="color:#fff;font-weight:500;">Expert Fabric Printing & Custom Designs</div>
-    <div style="color:#FFD700;font-weight:700;">DIGITAL & SCREEN PRINTING</div>
-</header>
-
-<div class="page-wrap">
-
-<!-- LEFT MODEL -->
-<div class="model-side">
-    <img src="model_left.jpg" alt="Saree Model Left">
-</div>
-
-<!-- CENTER -->
-<div class="main-container">
-
-    <div class="about-box">
-        <h2>About Our Products</h2>
-        <p>
-            At <b>Sreeja Saree Printers</b>, we specialize in premium fabric printing in Hyderabad.
-            We bring your designs to life using high-quality digital and screen printing on all types
-            of sarees with vibrant colors and long-lasting finish.
-        </p>
-    </div>
-
-    <div class="photo-layout">
-        <div class="photo-frame f1"><img src="photo1.jpg"></div>
-        <div class="photo-frame f2"><img src="photo2.jpg"></div>
-        <div class="photo-frame f3"><img src="photo3.jpg"></div>
-        <div class="photo-frame f4"><img src="photo4.jpg"></div>
-        <div class="photo-frame f5"><img src="photo5.jpg"></div>
-    </div>
-
-    <div class="sidebar">
-        <div class="side-card">
-            <h3 style="margin-top:0;color:#880e4f;">Watch Our Work</h3>
-            <a class="btn btn-insta" href="https://www.instagram.com/sreeja_saree_printers/" target="_blank">Instagram Feed</a>
-            <a class="btn btn-wa" href="https://wa.me/919247350908">WhatsApp Office 1</a>
-            <a class="btn btn-wa" href="https://wa.me/916281129602">WhatsApp Office 2</a>
-        </div>
-
-        <div class="side-card">
-            <div class="contact-info">
-                <strong>📍 Address</strong>
-                Sreeja Saree Printers,<br>
-                18-3-463/1/65/A, Shivaji Nagar,<br>
-                Rajanna Bavi, Falaknuma,<br>
-                Hyderabad – 500053, Telangana
-            </div>
-
-            <div class="contact-info">
-                <strong>📞 Phone</strong>
-                +91 92473 50908<br>
-                +91 62811 29602
-            </div>
-
-            <div class="contact-info">
-                <strong>✉ Email</strong>
-                sreejasareeprinters@gmail.com<br>
-                gundannagarimuralidharreddy@gmail.com
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- RIGHT MODEL -->
-<div class="model-side">
-    <img src="model_right.jpg" alt="Saree Model Right">
-</div>
-
-</div>
-
-<footer>
-© 2026 Sreeja Saree Printers | Quality Guaranteed | Hyderabad
-</footer>
-
-</body>
-</html>
+.f1{width:180px;height:180px;top:0;left:0;}
+.f2{width:180px;height:180px;top:0;right:0;}
+.f3{width:340px;height:340px;top:110px;left:50%;transform:translateX(-50%);}
+.f4
