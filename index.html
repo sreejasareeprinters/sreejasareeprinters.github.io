@@ -160,8 +160,8 @@
     <strong>📍 Address</strong>
     Sreeja Saree Printers,18-3-463/1/65/A, Shivaji Nagar,Rajannabavi, Falaknuma, Hyderabad – 500053,Telangana
     <br><br>
-    <strong>📍 Precise Location</strong>
-    <a href="javascript:void(0)" onclick="openMapModal()">8FQG+H8 Hyderabad, Telangana</a>
+    <strong>📍 Precise Location (Plus Code)</strong>
+<a href="https://www.google.com/maps/search/?api=1&query=8FQG+H8+Hyderabad" target="_blank">8FQG+H8 Hyderabad, Telangana</a>
 </div>
 
     <div class="header-center">
@@ -225,13 +225,7 @@
 
 <script>
     /* Image Popup Functions */
-    function openModal(src) {
-        document.getElementById("myModal").style.display = "block";
-        document.getElementById("imgPopup").src = src;
-    }
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
+    
 
     /* Map Popup Functions */
     function openMapModal() {
@@ -243,11 +237,11 @@
 
     /* Close everything if user clicks outside the box */
     window.onclick = function(event) {
-        let imgModal = document.getElementById("myModal");
-        let mapModal = document.getElementById("mapModal");
-        if (event.target == imgModal) { closeModal(); }
-        if (event.target == mapModal) { closeMapModal(); }
+    let modal = document.getElementById("myModal");
+    if (event.target == modal) { 
+        closeModal(); 
     }
+}
 </script>
 
 <footer>© 2026 Sreeja Saree Printers | Trusted since 15 Years | Hyderabad</footer>
