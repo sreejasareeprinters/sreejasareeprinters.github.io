@@ -236,24 +236,44 @@
 </div>
 
 <script>
-    /* Image Popup Functions */
-    
+   // 1. Organize your images by box/category
+    const digitalList = ["digital1.jpg", "digital2.jpg", "digital3.jpg"]; // Box 1
+    const screenList  = ["screen1.jpg", "screen2.jpg", "screen3.jpg"]; // Box 2
+    const customList  = ["custom1.jpg", "custom2.jpg", "custom3.jpg"]; // Box 3 (Center)
+    const designList  = ["design1.jpg", "design2.jpg", "design3.jpg"]; // Box 4
+    const workList    = ["work1.jpg", "work2.jpg", "work3.jpg"];     // Box 5
 
-    /* Map Popup Functions */
-    function openMapModal() {
-        document.getElementById("mapModal").style.display = "flex";
-    }
-    function closeMapModal() {
-        document.getElementById("mapModal").style.display = "none";
+    let slideIndex = 0;
+
+    // 2. Function to rotate images in every box
+    function nextSlide() {
+        slideIndex++;
+        
+        // Update each image by its ID
+        if(document.getElementById("slide1")) document.getElementById("slide1").src = digitalList[slideIndex % digitalList.length];
+        if(document.getElementById("slide2")) document.getElementById("slide2").src = screenList[slideIndex % screenList.length];
+        if(document.getElementById("slide3")) document.getElementById("slide3").src = customList[slideIndex % customList.length];
+        if(document.getElementById("slide4")) document.getElementById("slide4").src = designList[slideIndex % designList.length];
+        if(document.getElementById("slide5")) document.getElementById("slide5").src = workList[slideIndex % workList.length];
     }
 
-    /* Close everything if user clicks outside the box */
+    // Run the rotation every 4 seconds
+    setInterval(nextSlide, 4000);
+
+    /* 3. Image Popup Functions */
+    function openModal(src) {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("imgPopup").src = src;
+    }
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    /* 4. Close logic (outside click) */
     window.onclick = function(event) {
-    let modal = document.getElementById("myModal");
-    if (event.target == modal) { 
-        closeModal(); 
+        let modal = document.getElementById("myModal");
+        if (event.target == modal) { closeModal(); }
     }
-}
 </script>
 
 <footer>© 2026 Sreeja Saree Printers | Trusted since 15 Years | Hyderabad</footer>
