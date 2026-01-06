@@ -152,6 +152,26 @@
     }
     .f3 { width: 300px !important; height: 300px !important; }
 }
+/* Smooth Fade Animation */
+.fade {
+    animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Label for Box Names */
+.box-label {
+    background: var(--pink);
+    color: white;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    border: 1px solid var(--gold);
+}
     </style>
 </head>
 <body>
@@ -193,20 +213,25 @@
         </div>
 
         <div class="design">
-    <div class="frame f1" onclick="openModal(this.children[0].src)">
+    <div class="frame f1" onclick="openModal(this.querySelector('img').src)">
         <img src="digital1.jpg" id="slide1">
+        <span class="box-label">Digital Printing</span>
     </div>
-    <div class="frame f2" onclick="openModal(this.children[0].src)">
+    <div class="frame f2" onclick="openModal(this.querySelector('img').src)">
         <img src="screen1.jpg" id="slide2">
+        <span class="box-label">Screen Printing</span>
     </div>
-    <div class="frame f3" onclick="openModal(this.children[0].src)">
+    <div class="frame f3" onclick="openModal(this.querySelector('img').src)">
         <img src="printed1.jpg" id="slide3">
+        <span class="box-label">Printed Sarees</span>
     </div>
-    <div class="frame f4" onclick="openModal(this.children[0].src)">
-        <img src="blouses1.jpg" id="slide4">
+    <div class="frame f4" onclick="openModal(this.querySelector('img').src)">
+        <img src="blouse1.jpg" id="slide4">
+        <span class="box-label">Blouse Designs</span>
     </div>
-    <div class="frame f5" onclick="openModal(this.children[0].src)">
-        <img src="designs1" id="slide5">
+    <div class="frame f5" onclick="openModal(this.querySelector('img').src)">
+        <img src="design1.jpg" id="slide5">
+        <span class="box-label">Our Designs</span>
     </div>
 </div>
 
@@ -235,32 +260,41 @@
     </div>
 </div>
 
+
 <script>
-   // 1. Organize your images by box/category
-    const digitalList = ["digital1.jpg", "digital2.jpg", "digital3.jpg"]; // Box 1
-    const screenList  = ["screen1.jpg", "screen2.jpg", "screen3.jpg"]; // Box 2
-    const customList  = ["printed1.jpg", "printed2.jpg", "printed3.jpg"]; // Box 3 (Center)
-    const designList  = ["blouses1.jpg", "blouses2.jpg", "blouses3.jpg"]; // Box 4
-    const workList    = ["designs1.jpg", "designs2.jpg", "designs3.jpg"];     // Box 5
+    // These names must match your filenames exactly
+    const digitalList = ["digital1.jpg", "digital2.jpg", "digital3.jpg"];
+    const screenList  = ["screen1.jpg", "screen2.jpg", "screen3.jpg"];
+    const printedList = ["printed1.jpg", "printed2.jpg", "printed3.jpg"];
+    const blousesList = ["blouses1.jpg", "blouses2.jpg", "blouses3.jpg"];
+    const designsList = ["designs1.jpg", "designs2.jpg", "designs3.jpg"];
 
     let slideIndex = 0;
 
-    // 2. Function to rotate images in every box
     function nextSlide() {
         slideIndex++;
-        
-        // Update each image by its ID
-        if(document.getElementById("slide1")) document.getElementById("slide1").src = digitalList[slideIndex % digitalList.length];
-        if(document.getElementById("slide2")) document.getElementById("slide2").src = screenList[slideIndex % screenList.length];
-        if(document.getElementById("slide3")) document.getElementById("slide3").src = printedList[slideIndex % printedList.length];
-        if(document.getElementById("slide4")) document.getElementById("slide4").src = blousesList[slideIndex % blousesList.length];
-        if(document.getElementById("slide5")) document.getElementById("slide5").src = designs[slideIndex % designsList.length];
+        const allLists = [digitalList, screenList, printedList, blousesList, designsList];
+
+        for (let i = 1; i <= 5; i++) {
+            let img = document.getElementById("slide" + i);
+            let currentList = allLists[i-1];
+            
+            if(img) {
+                // This adds the smooth fading animation
+                img.classList.remove("fade");
+                void img.offsetWidth; // This line "resets" the animation
+                img.classList.add("fade");
+                
+                // This changes the image
+                img.src = currentList[slideIndex % currentList.length];
+            }
+        }
     }
 
-    // Run the rotation every 4 seconds
+    // Change images every 4 seconds
     setInterval(nextSlide, 4000);
 
-    /* 3. Image Popup Functions */
+    /* Popup Functions */
     function openModal(src) {
         document.getElementById("myModal").style.display = "block";
         document.getElementById("imgPopup").src = src;
@@ -268,8 +302,6 @@
     function closeModal() {
         document.getElementById("myModal").style.display = "none";
     }
-
-    /* 4. Close logic (outside click) */
     window.onclick = function(event) {
         let modal = document.getElementById("myModal");
         if (event.target == modal) { closeModal(); }
