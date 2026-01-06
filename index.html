@@ -226,11 +226,11 @@
         <span class="box-label">Printed Sarees</span>
     </div>
     <div class="frame f4" onclick="openModal(this.querySelector('img').src)">
-        <img src="blouse1.jpg" id="slide4">
+        <img src="blouses1.jpg" id="slide4">
         <span class="box-label">Blouse Designs</span>
     </div>
     <div class="frame f5" onclick="openModal(this.querySelector('img').src)">
-        <img src="design1.jpg" id="slide5">
+        <img src="designs1.jpg" id="slide5">
         <span class="box-label">Our Designs</span>
     </div>
 </div>
@@ -262,7 +262,7 @@
 
 
 <script>
-    // These names must match your filenames exactly
+    // 1. Your exact image lists
     const digitalList = ["digital1.jpg", "digital2.jpg", "digital3.jpg"];
     const screenList  = ["screen1.jpg", "screen2.jpg", "screen3.jpg"];
     const printedList = ["printed1.jpg", "printed2.jpg", "printed3.jpg"];
@@ -271,8 +271,11 @@
 
     let slideIndex = 0;
 
+    // 2. The function that runs the slideshow
     function nextSlide() {
         slideIndex++;
+        
+        // Match the lists to the slide IDs (1 to 5)
         const allLists = [digitalList, screenList, printedList, blousesList, designsList];
 
         for (let i = 1; i <= 5; i++) {
@@ -280,18 +283,18 @@
             let currentList = allLists[i-1];
             
             if(img) {
-                // This adds the smooth fading animation
+                // Apply the fade animation
                 img.classList.remove("fade");
-                void img.offsetWidth; // This line "resets" the animation
+                void img.offsetWidth; // This "restarts" the animation
                 img.classList.add("fade");
                 
-                // This changes the image
+                // Switch the image source
                 img.src = currentList[slideIndex % currentList.length];
             }
         }
     }
 
-    // Change images every 4 seconds
+    // Run every 4 seconds
     setInterval(nextSlide, 4000);
 
     /* Popup Functions */
