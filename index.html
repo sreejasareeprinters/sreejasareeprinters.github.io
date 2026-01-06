@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreeja Saree Printers | 15 Years of Excellence</title>
+/* This makes the box names appear below the images */
+.box-label {
+    display: block;
+    background: var(--pink); /* Matches your theme color */
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid var(--gold);
+    margin-top: -2px; /* Connects it to the box */
+}
+
+/* Ensures the frame doesn't cut off the label */
+.frame {
+    height: auto !important; 
+    overflow: visible !important;
+}
     <style>
         :root{ --pink:#d81b60; --gold:#D4AF37; }
         body{ margin:0; font-family:Segoe UI,Arial,sans-serif; background:#fff6f9; color:#333; }
